@@ -31,7 +31,14 @@ export default function RootLayout({ children }) {
           </div>
           <div>{children}</div>
 
-          <div>
+          <div className="lg:flex-col p-3 h-screen border-l  lg:flex w-[24rem] ">
+            <div className="sticky top-0 bg-white py-2">
+              <input
+                typeof="text"
+                placeholder="Search"
+                className="bg-gray-100 border border-gray-200 rounded-3xl text-sm w-full px-4 py-2 "
+              ></input>
+            </div>
             <News />
           </div>
         </div>
