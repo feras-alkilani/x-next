@@ -19,15 +19,15 @@ import {
 } from "firebase/firestore";
 import { app } from "../../firebase";
 import { useEffect, useState } from "react";
-// import { modalState, postIdState } from "../atom/modalAtom";
-// import { useRecoilState } from "recoil";
+import { modalState, postIdState } from "../../atom/modalAtom";
+import { useRecoilState } from "recoil";
 
 export default function Icons({ id, uid }) {
   const { data: session } = useSession();
   const [isLiked, setIsLiked] = useState(false);
   const [likes, setLikes] = useState([]); // [1
-  // const [open, setOpen] = useRecoilState(modalState);
-  // const [postId, setPostId] = useRecoilState(postIdState);
+  const [open, setOpen] = useRecoilState(modalState);
+  const [postId, setPostId] = useRecoilState(postIdState); // [2
   const [comments, setComments] = useState([]); // [3
   const db = getFirestore(app);
   const likePost = async () => {
