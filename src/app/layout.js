@@ -21,6 +21,8 @@ export const metadata = {
   description: "A Clone of X website built with Next.js and Tailwind CSS"
 };
 
+export const dynamic = "force-dynamic";
+
 export default function RootLayout({ children }) {
   return (
     <SessionWrapper>
